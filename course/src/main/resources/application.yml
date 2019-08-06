@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: superhero
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/devdojo?useTimezone=true&serverTimezone=America/Sao_Paulo
+    username: root
+    password: root
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  jmx:
+    enabled: false
+    
+      
