@@ -8,34 +8,26 @@
 		<groupId>academy.devdojo.youtube</groupId>
 		<artifactId>devdojo-microservices</artifactId>
 		<version>1.0-SNAPSHOT</version>
-		<relativePath>../</relativePath>
 	</parent>
-
-	<artifactId>course</artifactId>
-
+	<groupId>academy.devdojo.youtube</groupId>
+	<artifactId>discovery</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>discovery</name>
+	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
 	<dependencies>
-		<dependency>
-			<groupId>academy.devdojo.youtube</groupId>
-			<artifactId>core</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-netflix-eureka-server</artifactId>
+			<version>2.0.0.RELEASE</version>
+		</dependency>
 	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-	
 </project>

@@ -15,7 +15,8 @@
 	<modules>
 		<module>course</module>
     	<module>core</module>
-  	</modules>
+    <module>discovery</module>
+  </modules>
 	
 	<dependencies>
 		<dependency>
