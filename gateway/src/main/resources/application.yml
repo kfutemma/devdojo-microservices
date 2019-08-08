@@ -1,9 +1,15 @@
 spring:
   application:
-    name: registry
+    name: gateway
 
-server:  port: 8081
+server:  port: 8080
+  servlet:    context-path: /gateway
   
-eureka:  client:    register-with-eureka: false
-    fetch-registry: false
-    service-url:      defaultZone: http://localhost:${server.port}/eureka/
+eureka:
+  instance:    prefer-ip-address: true
+  client:    service-url:      defaultZone: http://localhost:8081/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+zuul:  sensitive-headers: Cookie  
+      

@@ -1,12 +1,21 @@
 server:
-  port: 8080
+  port: 8082
   
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+    fetch-registry: true
+    register-with-eureka: true  
+
 spring:
   application:
-    name: superhero
+    name: course
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/devdojo?useTimezone=true&serverTimezone=America/Sao_Paulo
+    url: jdbc:mysql://localhost:3306/devdojo?useTimezone=true&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true&sslMode=DISABLED
     username: root
     password: root
   jpa:

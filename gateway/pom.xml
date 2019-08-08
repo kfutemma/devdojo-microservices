@@ -7,9 +7,7 @@
     <artifactId>devdojo-microservices</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>academy.devdojo.youtube</groupId>
   <artifactId>gateway</artifactId>
-  <version>1.0-SNAPSHOT</version>
   <name>gateway</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -19,8 +17,24 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+	    <version>2.0.2.RELEASE</version>
+	</dependency>
   </dependencies>
+  <build>
+		<finalName>gateway</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
